@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+</head>
+<body>
+
+  <div class="container">
+    <p class="app-label">Live Forecast</p>
+    <h1 class="title">Weather App</h1>
+
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Search city..." />
+      <button id="searchBtn">
+        <i class="ti ti-search"></i> Search
+      </button>
+    </div>
+
+    <div class="error" id="errorMsg">
+      <i class="ti ti-map-pin-off"></i> City not found. Please try again.
+    </div>
+
+    <div class="weather-card" id="weatherCard">
+      <div class="card-top">
+        <div>
+          <h2 class="city-name" id="cityName"></h2>
+          <p class="date" id="date"></p>
+        </div>
+        <span class="country-pill" id="countryCode"></span>
+      </div>
+
+      <div class="temp-section">
+        <img id="weatherIcon" src="" alt="weather icon" />
+        <span class="temperature" id="temperature"></span>
+        <span class="temp-unit">°C</span>
+      </div>
+
+      <p class="description" id="description"></p>
+      <hr class="divider" />
+
+      <div class="details">
+        <div class="detail-item">
+          <span class="detail-icon"><i class="ti ti-droplet"></i></span>
+          <span class="value" id="humidity"></span>
+          <span class="label">Humidity</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-icon"><i class="ti ti-wind"></i></span>
+          <span class="value" id="windSpeed"></span>
+          <span class="label">Wind</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-icon"><i class="ti ti-thermometer"></i></span>
+          <span class="value" id="feelsLike"></span>
+          <span class="label">Feels like</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
